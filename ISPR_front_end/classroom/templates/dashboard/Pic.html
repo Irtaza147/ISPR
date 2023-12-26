@@ -1,0 +1,45 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+{% block body %}
+
+<style>
+    .image-container {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .image-column {
+        width: 48%;
+    }
+
+    .attractive-image {
+        max-width: 20%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+    .image-caption {
+        text-align: center;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+</style>
+
+<div class="image-container">
+    <div class="image-column">
+        <p class="image-caption">Correctly Parked</p>
+        <img class="attractive-image" src="{% static '\img\1.jpg' %}" alt="Image 1">
+        <img class="attractive-image" src="{% static '\img\3.jpg' %}" alt="Image 2">
+    </div>
+    <div class="image-column">
+        <p class="image-caption">Not Correctly Parked</p>
+        <img class="attractive-image" src="{% static '\img\2.jpg' %}" alt="Image 3">
+        <img class="attractive-image" src="{% static '\img\4.jpg' %}" alt="Image 4">
+
+    </div>
+</div>
+
+{% endblock %}
